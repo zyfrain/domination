@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<var-def name="fileContents">
+		<xpath expression="//script/."> 
+			<file action="read" path="fanduel_example.xml"/>
+    	</xpath>
+    </var-def>
+</config>

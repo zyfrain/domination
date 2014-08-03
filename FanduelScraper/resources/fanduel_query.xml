@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<file action="write" path="C:\temp\scrapper.xml">
+		<xpath expression="//script/."> 
+<!-- 			<file action="read" path="c:\temp\fanduel_example.xml"/>  -->
+			<html-to-xml>
+	    		<http url="https://www.fanduel.com/e/Game/NFL_Salary_Cap_10290/View">
+	    			<http-param name="chseat_id"><var name="id"/></http-param>
+	    			<http-param name="chseatCode"><var name="code"/></http-param>
+	    		</http>    	
+	    	</html-to-xml>
+    	</xpath>
+    </file>
+</config>
