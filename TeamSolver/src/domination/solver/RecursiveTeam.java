@@ -63,10 +63,10 @@ public final class RecursiveTeam implements Team {
 		if (this.cachedRoster == null) {
 			final String subRoster = this.subTeam.getRoster();
 			if (!subRoster.isEmpty()) {
-				this.cachedRoster = String.format("%s,%s", subRoster, this.player.getName());
+				this.cachedRoster = String.format("%s, %s (%.2f:$%.0f)", subRoster, this.player.getName(), this.player.getScore(), this.player.getCost());
 			}
 			else {
-				this.cachedRoster = this.player.getName();
+				this.cachedRoster = String.format("%s (%.2f:$%.0f)", this.player.getName(), this.player.getScore(), this.player.getCost());
 			}
 		}
 
