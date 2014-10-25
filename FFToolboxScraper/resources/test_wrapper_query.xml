@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<var-def name="fileContents">
-		<xpath expression="//."> 
-			<file action="read" path="fanduel_example.xml"/>
-    	</xpath>
+		<file action="read" path="fftoolbox_example.xml"/>
     </var-def>
 </config>

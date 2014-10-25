@@ -6,7 +6,7 @@ import org.webharvest.definition.ScraperConfiguration;
 import org.webharvest.runtime.Scraper;
 import org.webharvest.runtime.variables.Variable;
 
-public final class HarvestScraperWrapper {
+public final class FanduelScraper {
 
 	private final String configFile;
 	private final String workingDirectory;
@@ -14,19 +14,18 @@ public final class HarvestScraperWrapper {
 	/**
 	 * Public constructor
 	 * @param configFile the configuration file to use for web-scraping
-	 * @param workingDirectory the working directory for input/output opertations
+	 * @param workingDirectory the working directory for input/output operations
 	 */
-	public HarvestScraperWrapper(final String configFile, final String workingDirectory) {
+	public FanduelScraper(final String configFile, final String workingDirectory) {
 		this.configFile = configFile;
 		this.workingDirectory = workingDirectory;
 	}
 	
-	public String getWebContents(final String id, final String code) throws FileNotFoundException {
+	public String getWebContents(final String url) throws FileNotFoundException {
 		final ScraperConfiguration config = new ScraperConfiguration(configFile);
 		final Scraper scraper = new Scraper(config, workingDirectory);
 		
-		scraper.addVariableToContext("id", id);
-		scraper.addVariableToContext("code", code);
+		scraper.addVariableToContext("url", url);
 		
 		scraper.execute();
 

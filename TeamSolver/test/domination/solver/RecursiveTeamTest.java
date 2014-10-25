@@ -1,14 +1,18 @@
 package domination.solver;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
+
+import domination.common.Player;
+import domination.common.PlayerPosition;
 
 public class RecursiveTeamTest {
 	@Test
 	public void testTeamConstruction() {
-		final Player playerOne = new Player("One", PlayerPosition.QB, 10, 9);
-		final Player playerTwo = new Player("Two", PlayerPosition.RB, 5, 4);
-		final Player playerThree = new Player("Three", PlayerPosition.WR, 3, 2);
+		final Player playerOne = new Player("Key", "One", PlayerPosition.QB, 10, 9);
+		final Player playerTwo = new Player("Key", "Two", PlayerPosition.RB, 5, 4);
+		final Player playerThree = new Player("Key", "Three", PlayerPosition.WR, 3, 2);
 		
 		final Team teamOne = new RecursiveTeam(playerOne, new BaseTeam());
 		final Team teamTwo = new RecursiveTeam(playerTwo, teamOne);

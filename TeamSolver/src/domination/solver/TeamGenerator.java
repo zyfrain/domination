@@ -3,6 +3,10 @@ package domination.solver;
 import java.util.ArrayList;
 import java.util.List;
 
+import domination.common.DominationFilter;
+import domination.common.Player;
+import domination.common.PlayerPosition;
+
 public final class TeamGenerator {
 	final private ReducedRepository repository;
 	final private List<PlayerPosition> positions;

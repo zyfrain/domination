@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<var-def name="fileContents">
+		<xpath expression="//table[@id='proj']/."> 
+			<html-to-xml>
+	    		<http method="get" url="${url}">
+					<http-header name="Cookie"><var name="cookie"/></http-header>
+	    		 <!--"fftoolbox.scout.com/football/2014/weeklycheatsheets.cfm"> -->
+<!--   	    			<http-param name="player_pos"><var name="pos"/></http-param>  -->
+<!--   	    			<http-param name="page"><var name="page"/></http-param> -->
+<!--   	    			<http-param name="WeekNumber"><var name="week"/></http-param> -->
+<!--   	    			<http-param name="league_ID"><var name="league"/></http-param> -->
+	    		</http>    	
+	    	</html-to-xml>
+    	</xpath>
+    </var-def>
+</config>

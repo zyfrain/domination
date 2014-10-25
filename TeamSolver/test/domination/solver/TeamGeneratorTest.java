@@ -8,6 +8,9 @@ import java.util.Random;
 
 import org.junit.Test;
 
+import domination.common.Player;
+import domination.common.PlayerPosition;
+
 /**
  * Tests for the {@link TeamGenerator} class.
  */
@@ -20,7 +23,7 @@ public class TeamGeneratorTest {
 
 		final TeamGenerator generator = new TeamGenerator(players, positions);
 		final List<Team> teams = generator.generateTeams();
-		Collections.sort(teams, TeamScoreComparator.comparator);
+		Collections.sort(teams, ScoreComparator.teamComparator);
 
 		final List<Team> reportedTeams = new ArrayList<Team>();
 
@@ -70,7 +73,7 @@ public class TeamGeneratorTest {
 			final double costFactor = (rand.nextDouble() - .5) * scoreFactor;
 			final double cost = averageCost + (averageCost * costFactor);
 
-			players.add(new Player(String.format("%s_%d", position.toString(), i), position, cost, score));
+			players.add(new Player("Key", String.format("%s_%d", position.toString(), i), position, cost, score));
 		}
 
 		return players;

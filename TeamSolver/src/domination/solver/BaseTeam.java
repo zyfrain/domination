@@ -3,6 +3,8 @@ package domination.solver;
 import java.util.Collections;
 import java.util.List;
 
+import domination.common.Player;
+
 /**
  * Empty team used as the base case for the recursive team definition
  */

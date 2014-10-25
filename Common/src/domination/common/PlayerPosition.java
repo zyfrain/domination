@@ -1,4 +1,4 @@
-package domination.solver;
+package domination.common;
 
 public enum PlayerPosition {
 	QB, RB, WR, TE, K, DEF, RBWR;

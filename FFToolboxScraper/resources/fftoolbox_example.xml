@@ -1,0 +1,649 @@
+<table class="grid" id="proj" cellspacing="0" cellpadding="2">
+   <tbody>
+      <tr>
+         <th>Rank</th>
+         <th>Player</th>
+         <th>NFL
+<br/>Team</th>
+         <th>Opp.</th>
+         <th>Injury
+<br/>Status</th>
+         <th>Head to
+<br/>Head
+<br/>Stats?</th>
+         <th>Fantasy
+<br/>Pts</th>
+      </tr>
+      <tr class="stripe">
+         <td>1</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=3291" rel="external">Peyton Manning</a>
+            <a href="/football/nfl_news.cfm?news_id=7953">
+               <img src="http://usint03.fftoolbox.com/img/news.png" width="16" height="16"
+                    border="0"
+                    alt="News"
+                    title="News"
+                    style="margin-top:2px;"/>
+            </a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DEN" rel="external">DEN</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=IND" rel="external">IND</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=3291&amp;opponent=IND"
+               rel="external">Yes</a>
+         </td>
+         <td>28.8</td>
+      </tr>
+      <tr>
+         <td>2</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=4925" rel="external">Drew Brees</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NO" rel="external">NO</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=ATL" rel="external">@ATL</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=4925&amp;opponent=ATL"
+               rel="external">Yes</a>
+         </td>
+         <td>28.2</td>
+      </tr>
+      <tr class="stripe">
+         <td>3</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10695" rel="external">Andrew Luck</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=IND" rel="external">IND</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DEN" rel="external">@DEN</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=10695&amp;opponent=DEN"
+               rel="external">Yes</a>
+         </td>
+         <td>25.4</td>
+      </tr>
+      <tr>
+         <td>4</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10699" rel="external">Nick Foles</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=PHI" rel="external">PHI</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=JAX" rel="external">JAX</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>25.2</td>
+      </tr>
+      <tr class="stripe">
+         <td>5</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=9431" rel="external">Matthew Stafford</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DET" rel="external">DET</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NYG" rel="external">NYG</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=9431&amp;opponent=NYG"
+               rel="external">Yes</a>
+         </td>
+         <td>23.1</td>
+      </tr>
+      <tr>
+         <td>6</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10297" rel="external">Colin Kaepernick</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SF" rel="external">SF</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DAL" rel="external">@DAL</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>23.0</td>
+      </tr>
+      <tr class="stripe">
+         <td>7</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7836" rel="external">Aaron Rodgers</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=GB" rel="external">GB</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SEA" rel="external">@SEA</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7836&amp;opponent=SEA"
+               rel="external">Yes</a>
+         </td>
+         <td>22.6</td>
+      </tr>
+      <tr>
+         <td>8</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=6929" rel="external">Carson Palmer</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=ARI" rel="external">ARI</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SD" rel="external">SD</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=6929&amp;opponent=SD"
+               rel="external">Yes</a>
+         </td>
+         <td>22.0</td>
+      </tr>
+      <tr class="stripe">
+         <td>9</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7394" rel="external">Philip Rivers</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SD" rel="external">SD</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=ARI" rel="external">@ARI</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7394&amp;opponent=ARI"
+               rel="external">Yes</a>
+         </td>
+         <td>21.9</td>
+      </tr>
+      <tr>
+         <td>10</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=6589" rel="external">Josh McCown</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=TB" rel="external">TB</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CAR" rel="external">CAR</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>21.9</td>
+      </tr>
+      <tr class="stripe">
+         <td>11</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7401" rel="external">Ben Roethlisberger</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=PIT" rel="external">PIT</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CLE" rel="external">CLE</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7401&amp;opponent=CLE"
+               rel="external">Yes</a>
+         </td>
+         <td>21.8</td>
+      </tr>
+      <tr>
+         <td>12</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=8252" rel="external">Jay Cutler</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CHI" rel="external">CHI</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=BUF" rel="external">BUF</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=8252&amp;opponent=BUF"
+               rel="external">Yes</a>
+         </td>
+         <td>21.8</td>
+      </tr>
+      <tr class="stripe">
+         <td>13</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10697" rel="external">Ryan Tannehill</a>
+            <a href="/football/nfl_news.cfm?news_id=7957">
+               <img src="http://usint03.fftoolbox.com/img/news.png" width="16" height="16"
+                    border="0"
+                    alt="News"
+                    title="News"
+                    style="margin-top:2px;"/>
+            </a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=MIA" rel="external">MIA</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NE" rel="external">NE</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=10697&amp;opponent=NE"
+               rel="external">Yes</a>
+         </td>
+         <td>21.4</td>
+      </tr>
+      <tr>
+         <td>14</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10703" rel="external">Russell Wilson</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SEA" rel="external">SEA</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=GB" rel="external">GB</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=10703&amp;opponent=GB"
+               rel="external">Yes</a>
+         </td>
+         <td>21.4</td>
+      </tr>
+      <tr class="stripe">
+         <td>15</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10696" rel="external">Robert Griffin III</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=WAS" rel="external">WAS</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=HOU" rel="external">@HOU</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#WAS" rel="external">Prob - Knee</a>
+         </td>
+         <td>Never</td>
+         <td>21.3</td>
+      </tr>
+      <tr>
+         <td>16</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10273" rel="external">Cam Newton</a>
+            <a href="/football/nfl_news.cfm?news_id=7959">
+               <img src="http://usint03.fftoolbox.com/img/news.png" width="16" height="16"
+                    border="0"
+                    alt="News"
+                    title="News"
+                    style="margin-top:2px;"/>
+            </a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CAR" rel="external">CAR</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=TB" rel="external">@TB</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#CAR" rel="external">Que - Ankle</a>
+         </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=10273&amp;opponent=TB"
+               rel="external">Yes</a>
+         </td>
+         <td>21.1</td>
+      </tr>
+      <tr class="stripe">
+         <td>17</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7194" rel="external">Shaun Hill</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=STL" rel="external">STL</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=MIN" rel="external">MIN</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7194&amp;opponent=MIN"
+               rel="external">Yes</a>
+         </td>
+         <td>20.5</td>
+      </tr>
+      <tr>
+         <td>18</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=9099" rel="external">Matt Ryan</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=ATL" rel="external">ATL</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NO" rel="external">NO</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=9099&amp;opponent=NO"
+               rel="external">Yes</a>
+         </td>
+         <td>20.4</td>
+      </tr>
+      <tr class="stripe">
+         <td>19</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=5848" rel="external">Tom Brady</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NE" rel="external">NE</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=MIA" rel="external">@MIA</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=5848&amp;opponent=MIA"
+               rel="external">Yes</a>
+         </td>
+         <td>20.3</td>
+      </tr>
+      <tr>
+         <td>20</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7260" rel="external">Tony Romo</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DAL" rel="external">DAL</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=SF" rel="external">SF</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#DAL" rel="external">Prob - Back</a>
+         </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7260&amp;opponent=SF"
+               rel="external">Yes</a>
+         </td>
+         <td>20.1</td>
+      </tr>
+      <tr class="stripe">
+         <td>21</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10313" rel="external">Andy Dalton</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CIN" rel="external">CIN</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=BAL" rel="external">@BAL</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=10313&amp;opponent=BAL"
+               rel="external">Yes</a>
+         </td>
+         <td>19.5</td>
+      </tr>
+      <tr>
+         <td>22</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=8062" rel="external">Ryan Fitzpatrick</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=HOU" rel="external">HOU</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=WAS" rel="external">WAS</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=8062&amp;opponent=WAS"
+               rel="external">Yes</a>
+         </td>
+         <td>19.4</td>
+      </tr>
+      <tr class="stripe">
+         <td>23</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7813" rel="external">Alex Smith</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=KC" rel="external">KC</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=TEN" rel="external">TEN</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7813&amp;opponent=TEN"
+               rel="external">Yes</a>
+         </td>
+         <td>19.0</td>
+      </tr>
+      <tr>
+         <td>24</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=11150" rel="external">Geno Smith</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NYJ" rel="external">NYJ</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=OAK" rel="external">OAK</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=11150&amp;opponent=OAK"
+               rel="external">Yes</a>
+         </td>
+         <td>18.5</td>
+      </tr>
+      <tr class="stripe">
+         <td>25</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=9064" rel="external">Joe Flacco</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=BAL" rel="external">BAL</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CIN" rel="external">CIN</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#BAL" rel="external">Prob - Knee</a>
+         </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=9064&amp;opponent=CIN"
+               rel="external">Yes</a>
+         </td>
+         <td>18.0</td>
+      </tr>
+      <tr>
+         <td>26</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7391" rel="external">Eli Manning</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NYG" rel="external">NYG</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=DET" rel="external">@DET</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#NYG" rel="external">Prob - Ankle</a>
+         </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7391&amp;opponent=DET"
+               rel="external">Yes</a>
+         </td>
+         <td>16.7</td>
+      </tr>
+      <tr class="stripe">
+         <td>27</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=11154" rel="external">E.J. Manuel</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=BUF" rel="external">BUF</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CHI" rel="external">@CHI</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>16.6</td>
+      </tr>
+      <tr>
+         <td>28</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=10279" rel="external">Jake Locker</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=TEN" rel="external">TEN</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=KC" rel="external">@KC</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#TEN" rel="external">Que - Foot</a>
+         </td>
+         <td>Never</td>
+         <td>14.3</td>
+      </tr>
+      <tr class="stripe">
+         <td>29</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=8042" rel="external">Matt Cassel</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=MIN" rel="external">MIN</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=STL" rel="external">@STL</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=8042&amp;opponent=STL"
+               rel="external">Yes</a>
+         </td>
+         <td>14.2</td>
+      </tr>
+      <tr>
+         <td>30</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=11644" rel="external">Derek Carr</a>
+            <a href="/football/nfl_news.cfm?news_id=7958">
+               <img src="http://usint03.fftoolbox.com/img/news.png" width="16" height="16"
+                    border="0"
+                    alt="News"
+                    title="News"
+                    style="margin-top:2px;"/>
+            </a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=OAK" rel="external">OAK</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NYJ" rel="external">@NYJ</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>14.1</td>
+      </tr>
+      <tr class="stripe">
+         <td>31</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=11642" rel="external">Blake Bortles</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=JAX" rel="external">JAX</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=PHI" rel="external">@PHI</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>8.3</td>
+      </tr>
+      <tr>
+         <td>32</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=9714" rel="external">Brian Hoyer</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CLE" rel="external">CLE</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=PIT" rel="external">@PIT</a>
+         </td>
+         <td>
+            <a href="/football/nfl-injury-report.cfm#CLE" rel="external">Que - Knee</a>
+         </td>
+         <td>Never</td>
+         <td>8.3</td>
+      </tr>
+      <tr class="stripe">
+         <td>33</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=11641" rel="external">Johnny Manziel</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=CLE" rel="external">CLE</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=PIT" rel="external">@PIT</a>
+         </td>
+         <td> </td>
+         <td>Never</td>
+         <td>7.8</td>
+      </tr>
+      <tr>
+         <td>34</td>
+         <td>
+            <a href="/profiles/profile_display.cfm?player_id=7480" rel="external">Matt Schaub</a>
+            <a href="/football/nfl_news.cfm?news_id=7952">
+               <img src="http://usint03.fftoolbox.com/img/news.png" width="16" height="16"
+                    border="0"
+                    alt="News"
+                    title="News"
+                    style="margin-top:2px;"/>
+            </a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=OAK" rel="external">OAK</a>
+         </td>
+         <td>
+            <a href="/football/teams/team_page.cfm?nfl_team=NYJ" rel="external">@NYJ</a>
+         </td>
+         <td> </td>
+         <td>
+            <a href="/football/head-to-head-stats.cfm?player_id=7480&amp;opponent=NYJ"
+               rel="external">Yes</a>
+         </td>
+         <td>2.8</td>
+      </tr>
+   </tbody>
+</table>

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import domination.common.Player;
+
 /**
  * A team that is recursively defined from a sub-team. Uses the {@link BaseTeam}
  * as the base case for the recursion. Takes a previously existing sub-team and

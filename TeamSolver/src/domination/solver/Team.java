@@ -2,6 +2,9 @@ package domination.solver;
 
 import java.util.List;
 
+import domination.common.Dominatable;
+import domination.common.Player;
+
 /**
  * Defines the behavior of a Team object
  */

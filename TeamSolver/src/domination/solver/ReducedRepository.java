@@ -5,13 +5,15 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+
+import domination.common.Player;
+import domination.common.PlayerPosition;
 
 /**
  * Organizes and reduces the list of players to increase algorithmic efficiency.
  * Splits the players into a position keyed map, which will reduce the amount of
- * filtering necessary when moving from one position to the next. Executes a
- * {@link DominationFilter} on the initial seed list to remove dominated players
- * from consideration.
+ * filtering necessary when moving from one position to the next.
  */
 public class ReducedRepository {
 	private final List<PlayerPosition> positions;
@@ -46,9 +48,7 @@ public class ReducedRepository {
 
 	/**
 	 * Iterates of the list of players and adds them to each position that they
-	 * {@link PlayerPosition#satisfies(PlayerPosition)}. Executes a
-	 * {@link DominationFilter#filter} on each position list once it is
-	 * constructed.
+	 * {@link PlayerPosition#satisfies(PlayerPosition)}. 
 	 * 
 	 * @param players the list of players
 	 */
@@ -60,8 +60,9 @@ public class ReducedRepository {
 				}
 			}
 
-			DominationFilter.filter(this.playersByPosition.get(position));
 		}
+		
+		logPositionCounts();
 	}
 
 	/**
@@ -82,4 +83,17 @@ public class ReducedRepository {
 	public List<PlayerPosition> getPositions() {
 		return this.positions;
 	}
+
+	/**
+	 * Logs the position counts
+	 */
+	private void logPositionCounts() {
+		StringBuilder positionCounts = new StringBuilder();
+		positionCounts.append("Reduced to player counts: " + System.getProperty("line.separator"));
+		for (Entry<PlayerPosition, List<Player>> entry : playersByPosition.entrySet()) {
+			positionCounts.append(String.format("  %s: %d\n", entry.getKey().toString(), entry.getValue().size()));
+		}
+		System.out.println(positionCounts.toString());
+	}
+
 }

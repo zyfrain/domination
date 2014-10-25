@@ -1,4 +1,4 @@
-package domination.solver;
+package domination.common;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,6 +13,11 @@ import java.util.List;
 public final class DominationFilter {
 
 	/**
+	 * Determines whether or not to apply the domination filter
+	 */
+	public static boolean ENABLED = true;
+	
+	/**
 	 * Sorts the input list by increasing cost, the iterates over the list
 	 * removing any player that has a lower score then the previous player. As
 	 * cost increases, we expect score to similarly increase.
@@ -20,17 +25,19 @@ public final class DominationFilter {
 	 * @param list the list to be filtered
 	 */
 	public static <T extends Dominatable> void filter(final List<T> list) {
-		Collections.sort(list, comparator);
-
-		double previousScore = 0;
-		final Iterator<T> iterator = list.iterator();
-		while (iterator.hasNext()) {
-			final T next = iterator.next();
-			if (next.getScore() < previousScore) {
-				iterator.remove();
-			}
-			else {
-				previousScore = next.getScore();
+		if (ENABLED) {
+			Collections.sort(list, comparator);
+	
+			double previousScore = 0;
+			final Iterator<T> iterator = list.iterator();
+			while (iterator.hasNext()) {
+				final T next = iterator.next();
+				if (next.getScore() < previousScore) {
+					iterator.remove();
+				}
+				else {
+					previousScore = next.getScore();
+				}
 			}
 		}
 	}

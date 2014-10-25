@@ -1,16 +1,21 @@
 package domination.fanduel.scraper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
-import domination.solver.Player;
-import domination.solver.PlayerPosition;
+import domination.common.Player;
+import domination.common.PlayerPosition;
 
 public final class FanduelPlayerPicker {
 
 	private final double salaryCap;
 	private final List<PlayerPosition> positions;
-	private final List<Player> players;
+	private final SortedMap<Integer, Player> players;
 
 	/**
 	 * Private constructor - use the parse method to create objects of this type
@@ -18,7 +23,7 @@ public final class FanduelPlayerPicker {
 	 * @param positions the positions that are included in this league
 	 * @param players the players that are included in this league
 	 */
-	private FanduelPlayerPicker(double salaryCap, List<PlayerPosition> positions, List<Player> players) {
+	private FanduelPlayerPicker(double salaryCap, List<PlayerPosition> positions, SortedMap<Integer, Player> players) {
 		this.salaryCap = salaryCap;
 		this.positions = positions;
 		this.players = players;
@@ -35,13 +40,46 @@ public final class FanduelPlayerPicker {
 		
 		double salaryCap = parseSalaryCap(fdString);
 		List<PlayerPosition> positions = parsePositions(fdString);
-		List<Player> players = parsePlayers(fdString);
+		Map<Integer, Player> players = parsePlayers(fdString);
+		Map<Integer, Integer> sortedPlayerId = parsePlayerOrder(fdString);
 		
-		return new FanduelPlayerPicker(salaryCap, positions, players);
+		SortedMap<Integer, Player> sortedPlayers = mapPlayersToOrder(players, sortedPlayerId);
+		
+		return new FanduelPlayerPicker(salaryCap, positions, sortedPlayers);
 	}
 	
-	private static List<Player> parsePlayers(final String fdString) {
-		final List<Player> players = new ArrayList<Player>();
+	private static Map<Integer, Integer> parsePlayerOrder(final String fdString) {
+		Map<Integer, Integer> playerOrder = new HashMap<Integer, Integer>();
+		
+		final int beginIndex = fdString.indexOf("FD.playerpicker.sortedPlayerIds");
+		final int dataBeginIndex = fdString.indexOf("[", beginIndex);
+		final int endIndex = fdString.indexOf("]", beginIndex);
+		String subString = fdString.substring(dataBeginIndex + 1, endIndex);
+		
+		String [] ids = subString.split(",");
+		int index = 0;
+		for (String id : ids) {
+			playerOrder.put(index++, Integer.parseInt(id));
+		}
+		
+		return playerOrder;
+	}
+
+	private static SortedMap<Integer, Player> mapPlayersToOrder(Map<Integer, Player> players,
+			Map<Integer, Integer> sortedPlayerId) {
+		TreeMap<Integer, Player> map = new TreeMap<Integer, Player>();
+		
+		for (Entry<Integer, Integer> entry : sortedPlayerId.entrySet()) {
+			if (players.containsKey(entry.getValue())) {
+				map.put(entry.getKey(), players.get(entry.getValue()));
+			}
+		}
+		
+		return map;
+	}
+
+	private static Map<Integer, Player> parsePlayers(final String fdString) {
+		final Map<Integer, Player> players = new HashMap<Integer, Player>();
 		
 		final int beginIndex = fdString.indexOf("FD.playerpicker.allPlayersFullData");
 		final int dataBeginIndex = fdString.indexOf("{", beginIndex);
@@ -51,7 +89,8 @@ public final class FanduelPlayerPicker {
 		int start = 0;
 		int end = subString.indexOf("]");
 		while (end < subString.length() && end > 0) {
-			players.add(parsePlayer(subString.substring(start, end + 1)));
+			FanduelPlayer player = parsePlayer(subString.substring(start, end + 1));
+			players.put(player.getId(), player);
 
 			start = end + 2;
 			end = subString.indexOf("]", start);
@@ -65,9 +104,9 @@ public final class FanduelPlayerPicker {
 	 * @param playerString the player string
 	 * @return the created player data object
 	 */
-	public static Player parsePlayer(final String playerString) {
+	public static FanduelPlayer parsePlayer(final String playerString) {
 		String [] idAndArray = playerString.split(":");
-//		int id = Integer.parseInt(stripFirstAndLast(idAndArray[0]));
+		int id = Integer.parseInt(stripFirstAndLast(idAndArray[0]));
 
 		String csd = stripFirstAndLast(idAndArray[1]);
 		String [] descriptions = csd.split(",");
@@ -77,7 +116,7 @@ public final class FanduelPlayerPicker {
 		double salary = Double.parseDouble(stripFirstAndLast(descriptions[5]));
 		double points = Double.parseDouble(descriptions[6]);
 		
-		return new Player(name, position, salary, points);
+		return new FanduelPlayer(id, FanduelKeyGenerator.generateKey(name, position), name, position, salary, points);
 	}
 	
 	private static PlayerPosition parsePlayerPosition(final String position) {
@@ -134,7 +173,7 @@ public final class FanduelPlayerPicker {
 		return positions;
 	}
 
-	public List<Player> getPlayers() {
+	public SortedMap<Integer, Player> getPlayers() {
 		return players;
 	}	
 }
