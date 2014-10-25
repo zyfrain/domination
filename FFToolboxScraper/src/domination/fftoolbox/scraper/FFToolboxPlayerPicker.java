@@ -68,8 +68,6 @@ public class FFToolboxPlayerPicker {
 			returnValue = Double.parseDouble(sanitized);
 		}
 		catch (final NumberFormatException ex) {
-			char character = rowString.charAt(4);
-			int charCode = (int) character;
 			System.out.println(ex);
 		}
 		

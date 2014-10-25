@@ -38,7 +38,7 @@ public final class SolutionGenerator {
 	/**
 	 * Constructor
 	 */
-	public SolutionGenerator() {
+	private SolutionGenerator() {
 		override = false;
 		playerOverrides = new ArrayList<>();
 	}
@@ -49,7 +49,32 @@ public final class SolutionGenerator {
 	 * @param week the week to run for
 	 * @param cookie the FFToolbox login cookie
 	 */
-	public void generate(final String url, final int week, final String cookie) {
+	public static void generate(final String url, final int week, final String cookie) {
+		SolutionGenerator generator = new SolutionGenerator();
+		generator.generate_(url, week, cookie);
+	}
+	
+	/**
+	 * Generate a solution with player overrides
+	 * @param url the URL of the Fanduel contest page for the given week
+	 * @param week the week to run for
+	 * @param cookie the FFToolbox login cookie
+	 * @param overrides the list of players to override
+	 */
+	public static void generateWithOverrides(final String url, final int week, final String cookie, 
+			final List<String> overrides) {
+		SolutionGenerator generator = new SolutionGenerator();
+		generator.overridePlayers(overrides);
+		generator.generate_(url, week, cookie);
+	}
+	
+	/**
+	 * Generate a solution
+	 * @param url the URL of the Fanduel contest page for the given week
+	 * @param week the week to run for
+	 * @param cookie the FFToolbox login cookie
+	 */
+	private void generate_(final String url, final int week, final String cookie) {
 		try {
 			// Get the costed players from fanduel
 			System.out.println("Reading fanduel players");
@@ -143,7 +168,7 @@ public final class SolutionGenerator {
 		if (override) {
 			for (Player player : players) {
 				if (playerOverrides.contains(player.getKey())) {
-					overridenPlayers.add(Player.override(player, .0001));
+					overridenPlayers.add(Player.override(player, 6.0));
 				}
 				else {
 					overridenPlayers.add(player);

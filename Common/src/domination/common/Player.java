@@ -38,13 +38,13 @@ public class Player implements Dominatable {
 	}
 
 	/**
-	 * Creates a player from another player, overriding their cost
+	 * Creates a player from another player, overriding their score
 	 * @param player the original player
-	 * @param cost the new cost
+	 * @param override the new cost
 	 * @return the overriden player
 	 */
-	public static Player override(final Player player, final double cost) {
-		return new Player(player.key, player.name, player.position, cost, player.score);
+	public static Player override(final Player player, final double override) {
+		return new Player(player.key, player.name, player.position, player.cost, player.score + override);
 	}
 	
 	/**
