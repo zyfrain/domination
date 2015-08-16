@@ -54,4 +54,12 @@ public interface Team extends Dominatable {
 	 * @return the roster code
 	 */
 	int getRosterCode();
+	
+	@Override
+	int hashCode();
+	
+	@Override
+	boolean equals(Object obj);
+
+
 }

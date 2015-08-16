@@ -17,10 +17,16 @@ public final class FanduelKeyGenerator {
 	//   have non-standard names (e.g. RGIII, who can be listed as Robert Griffin or Robert Griffin III)
 	static {
 		explicitConversions = new HashMap<String, String>();
-//		explicitConversions.put("Charles Johnson", "Charles Johnson WR");
-//		explicitConversions.put("Calvin Johnson", "Calvin Johnson WR");
-//		explicitConversions.put("Malcolm Floyd", "Malcolm Floyd WR");
-//		explicitConversions.put("Michael Floyd", "Michael Floyd WR");
+		explicitConversions.put("Robert Griffin III", "Robert Griffin QB");
+		explicitConversions.put("New York Jets", "New York Jets DEF");
+		explicitConversions.put("New York Giants", "New York Giants DEF");
+		explicitConversions.put("Christopher Ivory", "Chris Ivory RB");
+		explicitConversions.put("Joseph Morgan", "Joe Morgan WR");
+		explicitConversions.put("Corey (Philly) Brown", "Philly Brown WR");
+		explicitConversions.put("Benjamin Watson", "Ben Watson TE");
+		explicitConversions.put("Odell Beckham Jr.", "Odell Beckham WR");
+		explicitConversions.put("Ted Ginn Jr.", "Ted Ginn WR");
+		explicitConversions.put("Denard Robinson", "Denard Robinson WR");
 	}
 
 	/**

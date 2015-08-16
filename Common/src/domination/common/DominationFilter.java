@@ -1,8 +1,9 @@
 package domination.common;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -24,21 +25,24 @@ public final class DominationFilter {
 	 * 
 	 * @param list the list to be filtered
 	 */
-	public static <T extends Dominatable> void filter(final List<T> list) {
+	public static <T extends Dominatable> List<T> filter(final Collection<T> list) {
 		if (ENABLED) {
-			Collections.sort(list, comparator);
+			ArrayList<T> sortedList = new ArrayList<>(list);
+			Collections.sort(sortedList, comparator);
 	
+			ArrayList<T> filteredList = new ArrayList<>();
 			double previousScore = 0;
-			final Iterator<T> iterator = list.iterator();
-			while (iterator.hasNext()) {
-				final T next = iterator.next();
-				if (next.getScore() < previousScore) {
-					iterator.remove();
-				}
-				else {
+			for (T next : sortedList) {
+				if (next.getScore() >= previousScore) {
+					filteredList.add(next);
 					previousScore = next.getScore();
 				}
 			}
+			
+			return filteredList;
+		}
+		else {
+			return new ArrayList<>(list);
 		}
 	}
 
@@ -48,7 +52,14 @@ public final class DominationFilter {
 	public static Comparator<Dominatable> comparator = new Comparator<Dominatable>() {
 		@Override
 		public int compare(final Dominatable a, final Dominatable b) {
-			return Double.compare(a.getCost(), b.getCost());
+			int compare = Double.compare(a.getCost(), b.getCost());
+			
+			if (compare != 0) {
+				return compare;
+			}
+			else {
+				return Double.compare(b.getScore(), a.getScore());
+			}
 		}
 	};
 }

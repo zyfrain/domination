@@ -1,8 +1,8 @@
 package domination.solver;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -21,32 +21,16 @@ public class TeamGeneratorTest {
 		final List<PlayerPosition> positions = generatePositions();
 		final List<Player> players = generatePlayers();
 
-		final TeamGenerator generator = new TeamGenerator(players, positions);
-		final List<Team> teams = generator.generateTeams();
-		Collections.sort(teams, ScoreComparator.teamComparator);
-
-		final List<Team> reportedTeams = new ArrayList<Team>();
-
-		int count = 0;
-		final Iterator<Team> iterator = teams.iterator();
-		while (count < 10 && iterator.hasNext()) {
-			final Team team = iterator.next();
-			if (team.getCost() < 125.0) {
-				boolean previouslyReported = false;
-				for (final Team previousTeam : reportedTeams) {
-					if (previousTeam.getRosterCode() == team.getRosterCode()) {
-						previouslyReported = true;
-						break;
-					}
-				}
-
-				if (!previouslyReported) {
-					count++;
-					System.out.println(String.format("%f, %f, %s", team.getScore(), team.getCost(), team.getRoster()));
-					reportedTeams.add(team);
-				}
-			}
-		}
+		SolverArguments arguments = new SolverArguments.Builder()
+											.addPlayers(players)
+											.addPositions(positions)
+											.setFlag(true)
+											.setSalaryCap(125.0)
+											.build();
+		final TeamGenerator generator = new TeamGenerator(arguments);
+		final Team team = generator.generateTeam();
+		
+		assertNotNull(team);
 	}
 
 	private List<Player> generatePlayers() {

@@ -1,6 +1,7 @@
 package domination.hthfantasy;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,62 +19,64 @@ import domination.solver.Team;
 public class SolutionGeneratorTest {
 
 	@Test
-	public void weekOne() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10290/View";
-		int week = 1;
+	public void weekThirteen() {
+		int week = 13;
+		final String thursUrl = "https://www.fanduel.com/e/Game/11053";
+		final String sunUrl = "https://www.fanduel.com/e/Game/11084";
+
+		final String outFilePre = "C:\\temp\\domination\\Week_" + week + "_";
+
+		final String averageFile = "C:\\Temp\\Domination\\FantasyPros_Week13.csv";
+		final String topFile = "C:\\Temp\\Domination\\TopExperts_Week13.csv";
+
+		SolutionGenerator.generate2(thursUrl, week, averageFile, outFilePre + "thursAve");
+		SolutionGenerator.generate2(thursUrl, week, topFile, outFilePre + "tursTop");
+		SolutionGenerator.generate2(sunUrl, week, averageFile, outFilePre + "sunAve");
+		SolutionGenerator.generate2(sunUrl, week, topFile, outFilePre + "sunTop");
+	}
+
+	@Test
+	public void basketballThirteen() {
+		final String baseDir = "C:\\temp\\domination\\basketball\\";
+
+		List<String> overrides = Collections.<String>emptyList(); //Arrays.<String>asList("DeMarcus Cousins C");
 		
-		SolutionGenerator.generate(url, week, "");
+//		SolutionGenerator.generateBB(baseDir + "NBA_Floor.csv", baseDir + "20141205_Floor", overrides);
+		SolutionGenerator.generateBB(baseDir + "NBA_Average.csv", baseDir + "20141213_Average", overrides);
+//		SolutionGenerator.generateBB(baseDir + "NBA_Ceiling.csv", baseDir + "20141205_Ceiling", overrides);		
 	}
 	
 	@Test
-	public void weekTwo() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10513/View";
-		int week = 2;
-		
-		SolutionGenerator.generate(url, week, "");
+	public void footballFanduel() {
+		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_11429/View";
+		String baseDir = "C:\\Temp\\Domination\\";
+
+		SolutionGenerator.generate2(url, 20, baseDir + "NFL_Playoff_Wk3_Fantasy_Pros.csv", baseDir + "Week_20");
 	}
 	
 	@Test
-	public void weekThree() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10563/View";
-		int week = 3;
-		SolutionGenerator.generate(url, week, "");
+	public void football() {
+		List<String> overrides = Collections.<String>emptyList();
+		String baseDir = "C:\\Temp\\Domination\\";
+		SolutionGenerator.generateFF(baseDir + "FantasyPros_Playoff_Week1.csv", baseDir + "Week_18", overrides);
 	}
 	
 	@Test
-	public void weekFour() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10606/View";
-		int week = 4;
-		String cookie = "CFID=158407179; CFTOKEN=eacecc10981dd10f-6D3854BF-CF55-F905-C9CEF4C086FCF691; __qca=P0-934549985-1409791514022; RefId=0; BrandId=0; __gads=ID=5537ff298e792bc6:T=1409791518:S=ALNI_MaDzKwzi2ybgIrCUe_NbYJnaP9rLQ; iPM=0; tisession=3Nsg7nE8OcamyuSChoT1xg==; email=zyfrain@yahoo.com; com.silverpop.iMAWebCookie=38dd9ad0-2bc1-1594-0a8a-6cd415999ebd; _gat=1; _gat_newTracker=1; SessionBrandId=0; _ga=GA1.2.1006868885.1411821335; __utma=113414992.1006868885.1411821335.1411824368.1411831342.3; __utmb=113414992.4.10.1411831342; __utmc=113414992; __utmz=113414992.1411821339.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmli=tabnav";			
-		SolutionGenerator.generate(url, week, cookie);
+	public void actuals() {
+//		String token = "A=FL7bKgnaoCJqIStxL6mVBA4IUct_XrX7.3bi__fnoEWrdixQs2av0QChaLVHAcDtyEriUSdFUXctrvWDsOfSjgl4OjLR.e.urbNnoD49.WrgNq6H2Lx.67aW6N3NFzHcZicOH25CIr.MMd3sOx4LIQcNHTilxgSfsod13C5AMmAGkbdxUz5vkW9KlTXrvt8OzAU6HKWNIWO1TDp1ZvwBbUbN3O.nRdBlT4mYzdElNAnP_McDDqmt33rYvioYXHwGzGJjk4ztPqgC50imqOBVMios84DjnlMgRGK23_7ZgZEDwgqHp2jjlzwpiWzXHM4nTBq.6FZwPKHx0J.l_ORkY34p0el45.JWYO9KZgiEmEggFt1pIH2qAzVVxDNcGuNqPNzUGUi9TgSySTD7ryc1JW_RImnugMCkOVYp3IFXfjQKw.CHHN1Sm9b_rU_qMgqRo9qCrwYwUZdK5cUaZCcJ2mBrO68cFJtkpk3xiOODrvLUVVfgikyZ5FMK.VL3sh5jbQJD5JTLBac23g4yiq84iuJzwgbybc9rICkYKdzoyhDYI6NaRRZsw61dy_FPd.f7P0Cazgs_oG9KJiC0s4N7wYtoFT5jqh_gfDLIG1R4vyYER5CzESqOlXdVajiS9sWurRqK9l3Yt6RQ92ZP87K8pGc.kK54aziAG7mVqGExqVS.5Ff58kh783Elc_G3cZRR4T.mdlLdGYF5S9ppgkKZyrD3EdtNkGoBAgJ4lOvdNN54xFe7NSt8serXiVBTtPHqEfqDgrpMup0pc9lHJISA03qwvFwoLUg-";
+//		String tokenSecret = "cce8e64dff9d390f33ba6faa3586f3a6a1ef89f4";
+		final String baseDir = "C:\\temp\\domination\\";
+		final int week = 13;
+		SolutionGenerator.generateActuals(week, baseDir + "Fanduel_Week13.csv", baseDir + "Actuals_Week13");
+
+//		final int week = 11;
+//		SolutionGenerator.generateActuals(week, baseDir + "Fanduel_Week12.csv", baseDir + "Actuals_Week12", token, tokenSecret);
+
+		//		for (int i = 8; i < 13; i++) {
+//			SolutionGenerator.generateActuals(i, baseDir + "Fanduel_Week" + i + ".csv", baseDir + "Actuals_Week" + i, token, tokenSecret);
+//		}
 	}
 	
-	@Test
-	public void weakSex() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10687/View";
-		int week = 6;
-		String cookie = "CFID=158407179; CFTOKEN=eacecc10981dd10f-6D3854BF-CF55-F905-C9CEF4C086FCF691; __qca=P0-934549985-1409791514022; RefId=0; BrandId=0; __gads=ID=5537ff298e792bc6:T=1409791518:S=ALNI_MaDzKwzi2ybgIrCUe_NbYJnaP9rLQ; SessionBrandId=0; com.silverpop.iMAWebCookie=38dd9ad0-2bc1-1594-0a8a-6cd415999ebd; _ga=GA1.2.1006868885.1411821335; _gat=1; _gat_newTracker=1; __utmt=1; __utma=113414992.1006868885.1411821335.1413075519.1413079319.6; __utmb=113414992.1.10.1413079319; __utmc=113414992; __utmz=113414992.1411821339.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)";			
-		SolutionGenerator.generate(url, week, cookie);
-	}
-	
-	@Test
-	public void weekSeven() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10748/View";
-		int week = 7;
-		String cookie = "CFID=158407179; CFTOKEN=eacecc10981dd10f-6D3854BF-CF55-F905-C9CEF4C086FCF691; __qca=P0-934549985-1409791514022; RefId=0; BrandId=0; __gads=ID=5537ff298e792bc6:T=1409791518:S=ALNI_MaDzKwzi2ybgIrCUe_NbYJnaP9rLQ; SessionBrandId=0; _gat_sitetracker1=1; iPM=0; tisession=3Nsg7nE8OcamyuSChoT1xg==; email=zyfrain@yahoo.com; _gat=1; _gat_newTracker=1; __utmt=1; _ga=GA1.2.1006868885.1411821335; __utma=113414992.1006868885.1411821335.1413336159.1413727462.9; __utmb=113414992.7.10.1413727462; __utmc=113414992; __utmz=113414992.1411821339.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); com.silverpop.iMAWebCookie=38dd9ad0-2bc1-1594-0a8a-6cd415999ebd; com.silverpop.iMA.page_visit=-603090041,587011995,1494942,47,; com.silverpop.iMA.session=49333485-6840-4a58-7bc0-6eb9cc558260; __utmli=startcontent";			
-		SolutionGenerator.generate(url, week, cookie);
-	}
-		
-	@Test
-	public void weekEight() {
-		String url = "https://www.fanduel.com/e/Game/NFL_Salary_Cap_10788/View";
-		int week = 8;
-		String cookie = "CFID=158407179; CFTOKEN=eacecc10981dd10f-6D3854BF-CF55-F905-C9CEF4C086FCF691; __qca=P0-934549985-1409791514022; RefId=0; BrandId=0; __gads=ID=5537ff298e792bc6:T=1409791518:S=ALNI_MaDzKwzi2ybgIrCUe_NbYJnaP9rLQ; SessionBrandId=0; iPM=0; tisession=3Nsg7nE8OcamyuSChoT1xg==; email=zyfrain@yahoo.com; _gat=1; _gat_newTracker=1; __utmt=1; _ga=GA1.2.1006868885.1411821335; __utma=113414992.1006868885.1411821335.1414247226.1414249708.11; __utmb=113414992.4.10.1414249708; __utmc=113414992; __utmz=113414992.1411821339.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); com.silverpop.iMAWebCookie=38dd9ad0-2bc1-1594-0a8a-6cd415999ebd; com.silverpop.iMA.page_visit=-603090041,587011995,1494942,; com.silverpop.iMA.session=a59115e8-8265-d543-b1e1-0713246c2bac; __utmli=startcontent";			
-		SolutionGenerator.generate(url, week, cookie);
-		SolutionGenerator.generateWithOverrides(url, week, cookie,
-				Arrays.<String>asList("Jerick McKinnon RB", "Doug Baldwin WR"));
-	}
-			
 	@Test
 	public void testReport() {
 		List<Player> players = FFToolboxDriver.readPlayers(2, "");
@@ -91,12 +94,23 @@ public class SolutionGeneratorTest {
 		}
 		
 		ReportRequest request = new ReportRequest.Builder()
-										.setAlphaTeam(team)
-										.setBetaTeam(team)
+										.setAlphaTeam(Arrays.<Team>asList(team))
+										.setBetaTeam(Arrays.<Team>asList(team))
 										.setPlayers(players)
 										.setBetaCap(0)
 										.setFilename("C:\\temp\\test.xlsx")
 										.build();
-		XSSFReportGenerator.report(request);
+		FootballReportGenerator.report(request);
+	}
+	
+	@Test
+	public void testFileRead() {
+		String filename = "C:\\Temp\\Domination\\FantasyPros_Week11.csv";
+		
+		List<Player> players = SolutionGenerator.getFilePlayers(filename);
+		
+		for (Player player : players) {
+			System.out.println(player.getKey());
+		}
 	}
 }

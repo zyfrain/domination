@@ -3,6 +3,9 @@ package domination.fanduel.scraper;
 import domination.common.Player;
 import domination.common.PlayerPosition;
 
+/**
+ * A player with Fanduel associated data
+ */
 public class FanduelPlayer extends Player {
 	private Integer id;
 	

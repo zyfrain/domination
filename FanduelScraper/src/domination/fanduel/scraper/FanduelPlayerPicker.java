@@ -11,6 +11,9 @@ import java.util.TreeMap;
 import domination.common.Player;
 import domination.common.PlayerPosition;
 
+/**
+ * Parses a set of {@link Player}s from the raw input string
+ */
 public final class FanduelPlayerPicker {
 
 	private final double salaryCap;
@@ -48,6 +51,11 @@ public final class FanduelPlayerPicker {
 		return new FanduelPlayerPicker(salaryCap, positions, sortedPlayers);
 	}
 	
+	/**
+	 * 
+	 * @param fdString
+	 * @return
+	 */
 	private static Map<Integer, Integer> parsePlayerOrder(final String fdString) {
 		Map<Integer, Integer> playerOrder = new HashMap<Integer, Integer>();
 		

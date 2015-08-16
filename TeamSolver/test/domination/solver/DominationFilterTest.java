@@ -24,9 +24,9 @@ public class DominationFilterTest {
 		players.add(removed2);
 		players.add(new Player("Key", "Player5", PlayerPosition.QB, 8, 10));
 
-		DominationFilter.filter(players);
-		assertTrue(players.size() == 3);
-		assertFalse(players.contains(removed1));
-		assertFalse(players.contains(removed2));
+		List<Player> filteredPlayers = DominationFilter.filter(players);
+		assertTrue(filteredPlayers.size() == 3);
+		assertFalse(filteredPlayers.contains(removed1));
+		assertFalse(filteredPlayers.contains(removed2));
 	}
 }

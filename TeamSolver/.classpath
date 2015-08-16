@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="Third Party JARs/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="Third Party JARs/mockito-all-1.9.5.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
+	<classpathentry kind="lib" path="Third Party JARs/commons-lang3-3.3.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

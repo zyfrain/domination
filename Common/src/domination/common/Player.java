@@ -1,5 +1,9 @@
 package domination.common;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -29,6 +33,10 @@ public class Player implements Dominatable {
 		this.position = position;
 	}
 
+	/**
+	 * Copy constructors
+	 * @param player the player to copy from
+	 */
 	public Player(Player player) {
 		this.key = player.key;
 		this.name = player.name;
@@ -45,6 +53,23 @@ public class Player implements Dominatable {
 	 */
 	public static Player override(final Player player, final double override) {
 		return new Player(player.key, player.name, player.position, player.cost, player.score + override);
+	}
+	
+
+	/**
+	 * Create a map of players to positions from a list of players
+	 * @param players the list of players
+	 * @return the map
+	 */
+	public static Map<PlayerPosition, Collection<Player>> buildMap(Collection<Player> players) {
+		Map<PlayerPosition, Collection<Player>> playerMap = new HashMap<>();
+		for (Player player : players) {
+			if (!playerMap.containsKey(player.getPosition())) {
+				playerMap.put(player.getPosition(), new ArrayList<Player>());
+			}
+			playerMap.get(player.getPosition()).add(player);
+		}
+		return playerMap;
 	}
 	
 	/**
@@ -68,6 +93,7 @@ public class Player implements Dominatable {
 		
 		return new Player(key, name, position, cost, score);
 	}
+	
 
 	/**
 	 * Create a CSV representation of the player
